@@ -1,85 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ContactUs.css';
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    alert('ขอบคุณสำหรับข้อความของคุณ เราจะติดต่อกลับโดยเร็วที่สุด');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
-
   return (
     <footer id="contact" className="contact-us">
       <div className="container">
         <h2 className="contact-title">ติดต่อเรา</h2>
         <div className="contact-content">
-          <div className="contact-form-container">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">ชื่อ-นามสกุล *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="กรุณากรอกชื่อ-นามสกุล"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">อีเมล *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="example@email.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">เบอร์โทรศัพท์</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="02-123-4567 หรือ 081-234-5678"
-                  value={formData.phone || ''}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">ข้อความ *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="กรุณากรอกข้อความที่ต้องการติดต่อ..."
-                  rows="6"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="submit-btn">ส่งข้อความ</button>
-            </form>
-          </div>
           <div className="contact-info">
             <div className="map-container">
               <iframe
