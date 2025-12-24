@@ -9,7 +9,11 @@ const HeroBanner = () => {
         <div className="hero-pattern"></div>
       </div>
       <div className="hero-image-container">
-        <img src="/Banner.png" alt="Blu Gas Banner" className="hero-banner-image" />
+        <img 
+          src="/Banner.png" 
+          alt="บลูแกส - บริการแก๊สคุณภาพสูง ปลอดภัย ครบวงจร แก๊สอุตสาหกรรม แก๊สครัวเรือน" 
+          className="hero-banner-image" 
+        />
       </div>
     </section>
   );

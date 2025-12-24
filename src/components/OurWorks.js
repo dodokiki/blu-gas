@@ -45,14 +45,16 @@ const OurWorks = () => {
     <section id="works" className="our-works">
       <div className="container">
         <h2 className="section-title">ผลงานของเรา</h2>
+        <p className="section-subtitle">โครงการและผลงานที่ผ่านมาของบลูแกสในการให้บริการแก๊สคุณภาพสูง</p>
         <div className="works-grid">
           {works.map((work) => (
             <div key={work.id} className="work-item">
               <img 
                 src={work.image} 
-                alt={work.title}
+                alt={`${work.title} - ${work.description} บลูแกส`}
                 className="work-image"
                 loading="lazy"
+                title={work.title}
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.parentElement.style.background = 'linear-gradient(135deg, #001f3f 0%, #003366 100%)';

@@ -22,7 +22,9 @@
   padding: 0 20px 60px;
   margin-top: -60px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  overflow: visible;
+  clear: both;
 }
 
 .about-cards-wrapper {
@@ -47,6 +49,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  overflow: visible;
 }
 
 .about-card:hover {
@@ -73,19 +77,48 @@
   line-height: 1;
 }
 
+.about-card-title {
+  color: #001f3f;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.about-card-subtitle {
+  color: #001f3f;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
 .about-text {
   color: #333333;
   font-size: 16px;
   line-height: 1.9;
   margin: 0;
   flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .about-card.wide .about-text {
-  display: flex;
-  align-items: center;
+  display: block;
   font-size: 17px;
   line-height: 2;
+  text-align: left;
+}
+
+.about-card.wide .about-text p {
+  margin: 0 0 15px 0;
+  color: #333333;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.about-card.wide .about-text p:last-child {
+  margin-bottom: 0;
 }
 
 .about-card.narrow .about-text {
@@ -102,12 +135,25 @@
   border-radius: 20px;
 }
 
+.about-description-title {
+  color: #001f3f;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
 .about-description p {
   color: #333333;
   font-size: 18px;
   line-height: 2.2;
   text-align: center;
-  margin: 0;
+  margin: 0 0 20px 0;
+}
+
+.about-description p:last-child {
+  margin-bottom: 0;
 }
 
 .about-features {

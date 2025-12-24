@@ -4,6 +4,8 @@
   position: relative;
   color: #ffffff;
   min-height: 600px;
+  width: 100%;
+  z-index: 0;
 }
 
 .contact-title {
@@ -35,6 +37,14 @@
 
 .form-group {
   width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .form-group input,

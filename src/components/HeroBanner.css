@@ -6,6 +6,8 @@
   overflow: hidden;
   padding-top: 80px;
   padding-bottom: 0;
+  width: 100%;
+  z-index: 0;
 }
 
 .hero-background {

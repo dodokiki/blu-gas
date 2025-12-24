@@ -5,6 +5,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: ''
   });
 
@@ -19,7 +20,7 @@ const ContactUs = () => {
     e.preventDefault();
     // Handle form submission here
     alert('ขอบคุณสำหรับข้อความของคุณ เราจะติดต่อกลับโดยเร็วที่สุด');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
@@ -30,29 +31,46 @@ const ContactUs = () => {
           <div className="contact-form-container">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
+                <label htmlFor="name">ชื่อ-นามสกุล *</label>
                 <input
                   type="text"
+                  id="name"
                   name="name"
-                  placeholder="Name"
+                  placeholder="กรุณากรอกชื่อ-นามสกุล"
                   value={formData.name}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="email">อีเมล *</label>
                 <input
                   type="email"
+                  id="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="example@email.com"
                   value={formData.email}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="phone">เบอร์โทรศัพท์</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="02-123-4567 หรือ 081-234-5678"
+                  value={formData.phone || ''}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">ข้อความ *</label>
                 <textarea
+                  id="message"
                   name="message"
-                  placeholder="Your message"
+                  placeholder="กรุณากรอกข้อความที่ต้องการติดต่อ..."
                   rows="6"
                   value={formData.message}
                   onChange={handleChange}
@@ -92,11 +110,15 @@ const ContactUs = () => {
                 <strong>LINE ID:</strong>
                 <p>@blu-gas1967</p>
               </div>
+              <div className="contact-item">
+                <strong>เวลาทำการ:</strong>
+                <p>บริการตลอด 24 ชั่วโมง ทุกวัน ไม่มีวันหยุด</p>
+              </div>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 Copy Rights Reserved</p>
+          <p>&copy; 2026 Copy Rights Reserved | บลูแกส - บริการแก๊สคุณภาพสูง ปลอดภัย ครบวงจร</p>
         </div>
       </div>
       <div className="footer-decoration"></div>

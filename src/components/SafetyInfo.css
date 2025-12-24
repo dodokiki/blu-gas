@@ -1,0 +1,152 @@
+.safety-info-section {
+  padding: 100px 20px;
+  background: #f8f9fa;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.safety-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.safety-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.safety-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.safety-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #001f3f;
+  margin-bottom: 15px;
+}
+
+.safety-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+  margin: 0;
+}
+
+.safety-note {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  border-left: 4px solid #001f3f;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.safety-note p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.safety-note p:last-child {
+  margin-bottom: 0;
+}
+
+.safety-note strong {
+  color: #001f3f;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .safety-info-section {
+    padding: 80px 20px;
+  }
+
+  .safety-grid {
+    gap: 25px;
+  }
+
+  .safety-card {
+    padding: 35px;
+  }
+
+  .safety-icon {
+    font-size: 55px;
+  }
+
+  .safety-title {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .safety-info-section {
+    padding: 60px 15px;
+  }
+
+  .safety-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .safety-card {
+    padding: 30px;
+  }
+
+  .safety-icon {
+    font-size: 50px;
+  }
+
+  .safety-title {
+    font-size: 19px;
+  }
+
+  .safety-description {
+    font-size: 15px;
+  }
+
+  .safety-note {
+    padding: 25px;
+  }
+
+  .safety-note p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .safety-card {
+    padding: 25px;
+  }
+
+  .safety-icon {
+    font-size: 45px;
+  }
+
+  .safety-title {
+    font-size: 18px;
+  }
+
+  .safety-note {
+    padding: 20px;
+  }
+}
+

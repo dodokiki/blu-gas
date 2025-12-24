@@ -2,6 +2,13 @@
   width: 100%;
   min-height: 100vh;
   background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.App > * {
+  position: relative;
+  width: 100%;
 }
 
 /* Smooth scrolling */

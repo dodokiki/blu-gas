@@ -40,6 +40,7 @@ const News = () => {
     <section id="news" className="news">
       <div className="container">
         <h2 className="section-title">ข่าวสารองค์กร</h2>
+        <p className="section-subtitle">ติดตามข่าวสารและอัพเดทล่าสุดจากบลูแกส</p>
         <div className="news-carousel">
           <button className="carousel-btn prev" onClick={prevSlide}>‹</button>
           <div className="carousel-container">
@@ -48,13 +49,14 @@ const News = () => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {newsItems.map((item) => (
-                <div key={item.id} className="news-card">
+                <article key={item.id} className="news-card">
                   <div className="news-image">
                     <img 
                       src={item.image} 
-                      alt={item.title}
+                      alt={`${item.title} - ข่าวสารบลูแกส`}
                       className="news-image-img"
                       loading="lazy"
+                      title={item.title}
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.parentElement.style.background = 'linear-gradient(135deg, #4da6ff 0%, #0066cc 50%, #001f3f 100%)';
@@ -69,9 +71,9 @@ const News = () => {
                   <div className="news-content">
                     <h3 className="news-title">{item.title}</h3>
                     <p className="news-description">{item.description}</p>
-                    <span className="news-time">{item.time}</span>
+                    <time className="news-time" dateTime={item.time}>{item.time}</time>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
