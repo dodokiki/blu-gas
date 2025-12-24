@@ -1,0 +1,156 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-main {
+  background: linear-gradient(135deg, #001f3f 0%, #003d6b 100%);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.top-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.top-nav a:hover {
+  color: #4da6ff;
+}
+
+.language-toggle {
+  color: #ffffff;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobile-menu {
+  display: none;
+  background: #001f3f;
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header.scrolled .header-main {
+  padding: 10px 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .top-nav {
+    gap: 20px;
+  }
+  
+  .top-nav a {
+    font-size: 13px;
+  }
+  
+  .logo-image {
+    height: 45px;
+  }
+}
+
+/* Mobile Menu */
+@media (max-width: 968px) {
+  .top-nav {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-main {
+    padding: 12px 0;
+  }
+  
+  .header-main .container {
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .logo-image {
+    height: 40px;
+  }
+  
+  .mobile-menu-toggle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 35px;
+  }
+}
+

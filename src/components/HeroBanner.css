@@ -1,0 +1,115 @@
+.hero-banner {
+  position: relative;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #4da6ff 0%, #0066cc 50%, #001f3f 100%);
+  opacity: 0.9;
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, transparent 70%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+  animation: patternMove 20s ease-in-out infinite;
+}
+
+@keyframes patternMove {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.hero-image-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  min-height: auto;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-banner {
+    padding-top: 75px;
+  }
+  
+  .hero-banner-image {
+    max-height: 80vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding-top: 64px;
+  }
+  
+  .hero-banner-image {
+    max-height: 75vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    padding-top: 59px;
+  }
+  
+  .hero-banner-image {
+    max-height: 70vh;
+  }
+}
+
